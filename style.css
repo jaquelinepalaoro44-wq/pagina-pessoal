@@ -1,0 +1,187 @@
+/* ---------- CORES E FONTES (mude aqui e a página inteira muda) ---------- */
+:root {
+  --fundo: #f5f8f8;
+  --texto: #1d2a2e;
+  --texto-suave: #55666b;
+  --principal: #1f6f78;
+  --destaque-fundo: #dcebea;
+  --linha: #c9d9d8;
+}
+
+* {
+  box-sizing: border-box;
+}
+
+body {
+  margin: 0;
+  background: var(--fundo);
+  color: var(--texto);
+  font-family: "Inter", Arial, sans-serif;
+  line-height: 1.65;
+}
+
+/* ---------- CABEÇALHO ---------- */
+.topo {
+  background: var(--destaque-fundo);
+  border-bottom: 3px solid var(--principal);
+  padding: 56px 20px 28px;
+}
+
+.topo > * {
+  max-width: 720px;
+  margin-left: auto;
+  margin-right: auto;
+}
+
+h1 {
+  font-family: "Fraunces", Georgia, serif;
+  font-size: clamp(2.2rem, 6vw, 3.4rem);
+  line-height: 1.1;
+  margin-top: 0;
+  margin-bottom: 12px;
+  color: var(--principal);
+}
+
+.frase {
+  font-size: 1.15rem;
+  color: var(--texto);
+  margin-top: 0;
+  margin-bottom: 28px;
+}
+
+nav {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 8px 20px;
+}
+
+nav a {
+  color: var(--principal);
+  font-weight: 600;
+  text-decoration: none;
+  padding: 4px 0;
+  border-bottom: 2px solid transparent;
+}
+
+nav a:hover {
+  border-bottom-color: var(--principal);
+}
+
+/* ---------- CONTEÚDO ---------- */
+main {
+  max-width: 720px;
+  margin: 0 auto;
+  padding: 0 20px;
+}
+
+section {
+  padding: 40px 0 8px;
+  scroll-margin-top: 16px;
+}
+
+h2 {
+  font-family: "Fraunces", Georgia, serif;
+  font-size: 1.6rem;
+  margin: 0 0 16px;
+  color: var(--texto);
+}
+
+p {
+  margin: 0 0 14px;
+  max-width: 65ch;
+}
+
+/* Listas de formação e estudos */
+.lista {
+  list-style: none;
+  margin: 0;
+  padding: 0;
+}
+
+.lista li {
+  padding: 12px 0;
+  border-bottom: 1px solid var(--linha);
+}
+
+.lista li:last-child {
+  border-bottom: none;
+}
+
+.lista strong,
+.linha-do-tempo strong {
+  display: block;
+}
+
+.lista span,
+.linha-do-tempo li > span:not(.periodo) {
+  color: var(--texto-suave);
+  font-size: 0.95rem;
+}
+
+/* Linha do tempo da experiência */
+.linha-do-tempo {
+  list-style: none;
+  margin: 0;
+  padding: 0 0 0 20px;
+  border-left: 2px solid var(--principal);
+}
+
+.linha-do-tempo li {
+  position: relative;
+  padding: 0 0 22px 8px;
+}
+
+.linha-do-tempo li::before {
+  content: "";
+  position: absolute;
+  left: -27px;
+  top: 8px;
+  width: 12px;
+  height: 12px;
+  background: var(--fundo);
+  border: 2px solid var(--principal);
+  border-radius: 50%;
+}
+
+.periodo {
+  display: block;
+  color: var(--principal);
+  font-size: 0.85rem;
+  font-weight: 600;
+}
+
+/* Contato */
+.links {
+  display: flex;
+  gap: 12px;
+  flex-wrap: wrap;
+}
+
+.links a {
+  background: var(--principal);
+  color: #ffffff;
+  text-decoration: none;
+  font-weight: 600;
+  padding: 10px 22px;
+  border-radius: 6px;
+}
+
+.links a:hover {
+  background: #17565d;
+}
+
+/* Foco visível para quem navega pelo teclado */
+a:focus-visible {
+  outline: 3px solid #e0a000;
+  outline-offset: 3px;
+}
+
+/* ---------- RODAPÉ ---------- */
+footer {
+  max-width: 720px;
+  margin: 48px auto 0;
+  padding: 20px;
+  border-top: 1px solid var(--linha);
+  color: var(--texto-suave);
+  font-size: 0.9rem;
+}
